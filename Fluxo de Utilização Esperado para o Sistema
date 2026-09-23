@@ -1,1 +1,20 @@
-
+O EXPEDIENTE — Interação do usuário com o programa
+1. Ao iniciar o programa, o jogador visualizará um menu principal com as opções:
+1. Iniciar Jogo
+2. Instruções
+3. Sobre o Jogo
+4. Sair
+2. Caso o jogador escolha 1, o sistema iniciará a história, apresentando Juliano, protagonista do jogo, e seu primeiro dia de trabalho na loja de salgados Sabor Coxinha, administrada por Maria e Oswaldo.
+3. Durante os quatro dias de expediente, o programa exibirá diálogos, acontecimentos e descrições dos ambientes. O jogador acompanhará a rotina de Juliano e realizará escolhas por meio de opções numéricas, utilizando o teclado para avançar na narrativa.
+4. No primeiro dia, Juliano conhecerá a loja, suas tarefas e os proprietários, percebendo a existência de uma área restrita. No segundo dia, o programa apresentará situações suspeitas, como barulhos e comportamentos estranhos. No terceiro dia, Oswaldo mostrará onde fica a chave da loja, deixando à vista uma chave diferente das demais.
+5. No quarto dia, Juliano utilizará a chave para acessar a área proibida, onde encontrará um freezer com evidências dos crimes de Maria e Oswaldo. Ao encontrar sua própria fotografia entre as evidências, perceberá que também havia sido escolhido como uma futura vítima.
+6. Após a descoberta, Maria retornará à loja, e o jogador deverá escolher onde Juliano irá se esconder. O programa apresentará as opções:
+1. Esconder-se no armário embaixo da pia da cozinha
+2. Esconder-se na gerência
+7. Caso o jogador escolha 1, Juliano conseguirá permanecer escondido, escapar da loja e procurar ajuda. O programa exibirá o primeiro final, no qual a polícia iniciará uma investigação sobre o estabelecimento.
+8. Caso o jogador escolha 2, Maria encontrará Juliano na gerência. O programa exibirá o segundo final, informando que ele não conseguiu sair do estabelecimento. Em seguida, mostrará que, alguns dias depois, um novo funcionário foi contratado e a Sabor Coxinha continuou funcionando normalmente.
+9. Ao término da história, o sistema exibirá uma mensagem correspondente ao final alcançado e apresentará as opções:
+1. Jogar Novamente
+2. Voltar ao Menu Principal
+3. Sair
+10. Caso o jogador informe uma opção inválida em qualquer menu ou momento de escolha, o programa exibirá uma mensagem de erro e solicitará uma nova entrada, utilizando estruturas de seleção e repetição para garantir a continuidade da interação.
