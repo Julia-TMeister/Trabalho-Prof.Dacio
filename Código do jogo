@@ -1,12 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
+//Estrutura utilizada para armazenar as informações do jogo
+typedef struct {
+    int dia;
+    int pistas;
+    int escolha;
+} Jogo;
 
 void inicializarJogo(int *dia, int *pistas, int *escolha) {
     *dia = 1;
     *pistas = 0;
     *escolha = 0;
 }
-
 void exibirIntroducao() {
 
     printf("====================================\n");
