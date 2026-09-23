@@ -1,4 +1,15 @@
 # HISTÓRIA DO JOGO — O EXPEDIENTE
+O projeto consiste no desenvolvimento de um jogo de aventura e investigação em linguagem C, chamado “O Expediente”. O sistema apresenta uma história interativa
+na qual o jogador controla Juliano, um personagem que consegue um emprego em uma pequena loja de salgados chamada Sabor Coxinha, administrada por Maria e Oswaldo.
+O jogo será executado pelo terminal, utilizando textos, diálogos e escolhas para conduzir o jogador durante a história.
+As decisões tomadas pelo jogador influenciam o desenvolvimento da narrativa e podem levar a diferentes acontecimentos e finais.
+O sistema possui como principais elementos personagens, dias da história, escolhas, pistas e diferentes caminhos narrativos. As informações
+necessárias para o funcionamento do jogo serão organizadas por meio de estruturas de 
+dados (struct), permitindo armazenar e controlar informações como o dia atual, a quantidade de pistas e as escolhas realizadas pelo jogador.
+O foco principal do projeto é desenvolver uma experiência de narrativa interativa, permitindo que o jogador participe da história por meio de suas 
+escolhas, em vez de apenas acompanhar uma sequência fixa de acontecimentos. Dessa forma, o sistema busca trabalhar conceitos de programação em linguagem C,
+como estruturas de dados, funções, variáveis, condições, repetição e entrada de dados.
+Ao final, as escolhas do jogador determinam se Juliano consegue escapar ou se acaba se tornando mais uma vítima, resultando em diferentes finais para a história.
 
 ## Personagens
 
