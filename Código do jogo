@@ -59,7 +59,51 @@ void diaUm(int *pistas, int *escolha) {
     printf("Maria: Vou apresentar o lugar para voce e explicar\n");
     printf("       como as coisas funcionam por aqui.\n");
 
+// Escolhas
+    printf("\n====================================\n");
+    printf("          UMA PORTA ESTRANHA\n");
+    printf("====================================\n");
 
+    printf("\nDurante a apresentacao, Juliano percebe\n");
+    printf("uma porta que leva para uma area desconhecida.\n");
+
+    printf("\nJuliano pergunta sobre a porta.\n");
+
+    printf("\nMaria responde que aquela area e restrita\n");
+    printf("e que ele nao precisa entrar la.\n");
+
+    printf("\nO que Juliano faz?\n");
+
+    printf("\n1 - Perguntar mais sobre a porta\n");
+    printf("2 - Ficar quieto e continuar trabalhando\n");
+
+    printf("\nEscolha: ");
+    scanf("%d", escolha);
+
+    while (*escolha != 1 && *escolha != 2) {
+
+        printf("\nOpcao invalida!\n");
+        printf("Escolha 1 ou 2: ");
+        scanf("%d", escolha);
+    }
+
+    if (*escolha == 1) {
+
+        printf("\nJuliano pergunta novamente sobre a porta.\n");
+
+        printf("\nMaria diz que nao ha nada importante la.\n");
+
+        *pistas = *pistas + 1;
+
+    } else {
+
+        printf("\nJuliano decide nao insistir.\n");
+
+        printf("\nEle continua trabalhando normalmente.\n");
+    }
+
+    printf("\nO primeiro dia termina.\n");
+}
 
 //fechamento 
 int main(int argc, char *argv[]) {
