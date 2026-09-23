@@ -1,11 +1,13 @@
-Interação do usuário com o programa — O Expediente
-1. Ao iniciar o programa, o jogador visualizará, no terminal, o título O EXPEDIENTE e uma introdução apresentando Juliano, que consegue um emprego na loja de salgados Sabor Coxinha.
-2. Em seguida, o programa apresentará o Dia 1 — O Emprego, exibindo os diálogos de Maria e representações visuais dos ambientes da loja, como o balcão de atendimento, a cozinha, a sala de administração e o banheiro.
-3. Durante a apresentação, Juliano perceberá uma porta que leva a uma área restrita. Após Maria informar que ele não precisa entrar naquele local, o sistema solicitará que o jogador escolha uma das seguintes opções:
-- 1 - Perguntar mais sobre a porta
-- 2 - Ficar quieto e continuar trabalhando
-4. O jogador deverá digitar 1 ou 2 no terminal. O programa receberá a resposta por meio da função scanf() e verificará a opção escolhida utilizando estruturas condicionais if e else.
-5. Caso o jogador escolha 1, Juliano perguntará novamente sobre a porta. Maria responderá que não há nada importante naquele local, e o programa acrescentará uma pista à variável pistas. Caso escolha 2, Juliano não insistirá e continuará trabalhando normalmente.
-6. Se o jogador digitar uma opção diferente de 1 ou 2, o programa exibirá a mensagem Opcao invalida! e solicitará uma nova escolha. Esse processo será repetido por meio de um laço while até que uma opção válida seja informada.
-7. Após a execução da alternativa escolhida, o sistema exibirá a mensagem O primeiro dia termina., encerrando o primeiro dia do jogo.
-Observação: A descrição corresponde ao código atualmente implementado, que contempla a introdução e o primeiro dia. Os demais dias, as novas escolhas e os dois finais apresentados na proposta do jogo ainda não estão implementados no código fornecido.
+Ao iniciar o programa, o jogador visualizará a introdução da história de O Expediente, conhecendo Juliano e sua contratação pela loja Sabor Coxinha.
+O programa apresentará o Dia 1, no qual Juliano chega ao estabelecimento e conhece Maria. O jogador acompanhará a apresentação dos principais ambientes da loja, como a entrada, a cozinha, a sala de administração e o banheiro.
+Durante a apresentação, Juliano perceberá uma porta que dá acesso a uma área restrita. O programa apresentará duas opções ao jogador:
+1. Perguntar mais sobre a porta
+2. Ficar quieto e continuar trabalhando
+O jogador deverá informar sua escolha pelo teclado. Caso seja digitada uma opção diferente de 1 ou 2, o programa exibirá uma mensagem de opção inválida e solicitará uma nova escolha.
+Caso o jogador escolha 1, Juliano perguntará novamente sobre a porta. Maria responderá que não há nada importante no local e o sistema registrará uma pista para o jogador.
+Caso o jogador escolha 2, Juliano decidirá não insistir e continuará trabalhando normalmente. Nesse caso, nenhuma pista será adicionada.
+Após a escolha, o programa informará que o primeiro dia terminou. Nos próximos dias da história, o jogador continuará acompanhando Juliano e poderá realizar novas escolhas relacionadas às suas descobertas.
+No decorrer da história, o jogador deverá tomar decisões que influenciarão o desenvolvimento da narrativa. No momento final, poderá escolher entre diferentes esconderijos para tentar escapar de Maria:
+1. Esconder-se no armário embaixo da pia
+2. Esconder-se na gerência
+Dependendo da escolha realizada, o programa apresentará um dos dois finais possíveis: Juliano consegue escapar e procurar ajuda ou Juliano é capturado, dando continuidade ao ciclo da Sabor Coxinha.
