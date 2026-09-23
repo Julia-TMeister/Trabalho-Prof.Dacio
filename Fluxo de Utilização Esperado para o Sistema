@@ -1,13 +1,15 @@
-Ao iniciar o programa, o jogador visualizará a introdução da história de O Expediente, conhecendo Juliano e sua contratação pela loja Sabor Coxinha.
-O programa apresentará o Dia 1, no qual Juliano chega ao estabelecimento e conhece Maria. O jogador acompanhará a apresentação dos principais ambientes da loja, como a entrada, a cozinha, a sala de administração e o banheiro.
-Durante a apresentação, Juliano perceberá uma porta que dá acesso a uma área restrita. O programa apresentará duas opções ao jogador:
-1. Perguntar mais sobre a porta
-2. Ficar quieto e continuar trabalhando
-O jogador deverá informar sua escolha pelo teclado. Caso seja digitada uma opção diferente de 1 ou 2, o programa exibirá uma mensagem de opção inválida e solicitará uma nova escolha.
-Caso o jogador escolha 1, Juliano perguntará novamente sobre a porta. Maria responderá que não há nada importante no local e o sistema registrará uma pista para o jogador.
-Caso o jogador escolha 2, Juliano decidirá não insistir e continuará trabalhando normalmente. Nesse caso, nenhuma pista será adicionada.
-Após a escolha, o programa informará que o primeiro dia terminou. Nos próximos dias da história, o jogador continuará acompanhando Juliano e poderá realizar novas escolhas relacionadas às suas descobertas.
-No decorrer da história, o jogador deverá tomar decisões que influenciarão o desenvolvimento da narrativa. No momento final, poderá escolher entre diferentes esconderijos para tentar escapar de Maria:
-1. Esconder-se no armário embaixo da pia
-2. Esconder-se na gerência
-Dependendo da escolha realizada, o programa apresentará um dos dois finais possíveis: Juliano consegue escapar e procurar ajuda ou Juliano é capturado, dando continuidade ao ciclo da Sabor Coxinha.
+Descrição da interação do usuário com o programa — O Expediente
+1. Ao iniciar o programa, o usuário visualizará, no terminal, o título O EXPEDIENTE e a introdução da história. O programa apresentará Juliano, um jovem que está procurando emprego e consegue uma vaga na loja de salgados Sabor Coxinha, administrada por Maria e Oswaldo.
+2. Após a introdução, o programa iniciará o Dia 1 — O Emprego. Maria apresentará a loja, explicará as funções de Juliano e mostrará os ambientes do estabelecimento. Durante a apresentação, Juliano perceberá uma porta que dá acesso a uma área restrita. Nesse momento, o usuário deverá escolher uma das opções:
+- 1. Perguntar sobre a porta
+- 2. Ficar quieto
+3. Caso o usuário escolha 1, Juliano perguntará sobre a porta, e Maria responderá que aquela área não é importante e que ele não precisa se preocupar com ela. Caso escolha 2, Juliano permanecerá em silêncio e continuará suas atividades normalmente. Independentemente da alternativa selecionada, o programa encerrará o primeiro dia.
+4. No Dia 2 — Coisas Estranhas, o programa apresentará situações suspeitas, como barulhos vindos da área restrita e comportamentos estranhos dos proprietários. O usuário acompanhará os acontecimentos e as pistas que aumentarão as suspeitas de Juliano sobre o estabelecimento.
+5. No Dia 3 — A Chave, Oswaldo mostrará a Juliano onde fica guardada a chave da loja. Durante essa interação, Juliano perceberá uma chave diferente das demais. O programa apresentará essa descoberta, que será importante para acessar a área restrita posteriormente.
+6. No Dia 4 — A Descoberta, Juliano utilizará a chave para abrir a porta proibida. O programa exibirá a descoberta de um freezer com evidências dos crimes de Maria e Oswaldo. Entre as fotografias encontradas, Juliano reconhecerá a própria foto e perceberá que também havia sido escolhido como uma futura vítima.
+7. Após a descoberta, Maria retornará à loja e perceberá que Juliano encontrou o local secreto. Nesse momento, o usuário deverá escolher onde o protagonista irá se esconder:
+- 1. Esconder-se no armário embaixo da pia da cozinha
+- 2. Esconder-se na gerência
+8. Caso o usuário escolha 1, Juliano conseguirá permanecer escondido, escapar do estabelecimento e procurar ajuda. O programa exibirá o Final 1, no qual a polícia iniciará uma investigação sobre a Sabor Coxinha.
+9. Caso o usuário escolha 2, Maria encontrará Juliano na gerência. O programa exibirá o Final 2, informando que ele não conseguiu deixar o estabelecimento. Alguns dias depois, um novo funcionário será contratado, e a Sabor Coxinha continuará funcionando normalmente, indicando que o ciclo de crimes continuará.
+10. As escolhas do usuário serão recebidas pelo teclado e processadas por estruturas condicionais if e else, determinando o desenvolvimento da narrativa e o final apresentado. O programa utilizará funções para organizar os acontecimentos de cada dia e exibirá as mensagens correspondentes às decisões tomadas pelo jogador.
