@@ -64,6 +64,98 @@ void diaUm(int *pistas, int *escolha) {
     printf("Maria: Vou apresentar o lugar para voce e explicar\n");
     printf("       como as coisas funcionam por aqui.\n");
 
+//Personagem vai conhecer a lanchonete
+
+    printf("\nJuliano cumprimenta Maria e se prepara para conhecer\n");
+    printf("seu novo local de trabalho.\n");
+
+    printf("  +------------------------------------------------------(o)----------+  \n");
+    printf("  |                                              PORTA DA COZINHA     |  \n");
+    printf("  |                                                                   |  \n");
+    printf("  |  +-------------------------------------------------------------+  |  \n");
+    printf("  |  |                   BALCAO DE ATENDIMENTO                     |  |  \n");
+    printf("  |  |  +-------+  +-------+  +-------+  +-------+  +-----------+  |  |  \n");
+    printf("  |  |  |       |  |       |  |       |  |       |  |           |  |  |  \n");
+    printf("  |  |  | [~~~] |  | (o o) |  | (o o) |  | [===] |  |  [=====]  |  |  |\n");
+    printf("  |  |  +-------+  +-------+  +-------+  +-------+  +-----------+  |  |  \n");
+    printf("  |  +-------------------------------------------------------------+  |  \n");
+    printf("  |                                                                   |  \n");
+    printf("  |                                                                   |  \n");
+    printf("  |                                                                   |  \n");
+    printf("  |                                                                   |  \n");
+    printf("  +----------------======[                ]======---------------------+  \n");
+    printf("                              ENTRADA                                   \n\n");
+
+    printf("Maria: Esta e a entrada da lanchonete.\n");
+    printf("Maria: Aqui fica o balcao onde atendemos os clientes.\n");
+
+    printf("  +-------------------------------------------------------------------+  \n");
+    printf("  |  [GELADEIRA]    [FRITADEIRA]      [PIA]            [DESPENSA]     |  \n");
+    printf("  |  +----------+   +----------+   +----------+     +--------------+  |  \n");
+    printf("  |  |  [  ]    |   | (O)  (O) |   |  (||)    |     | [==========] |  |  \n");
+    printf("  |  |  |  |    |   | +------+ |   | |~~~~~~| |     | [==========] |  |  \n");
+    printf("  |  |  +--+    |   | |      | |   | |______| |     | [==========] | (o)  \n");
+    printf("  |  |  [  ]    |   | |      | |   |  |    |  |     | [==========] | PORTA \n");
+    printf("  |  |  |  |    |   | +------+ |   |  +----+  |     | [==========] |  |  \n");
+    printf("  |  +----------+   +----------+   +----------+     +--------------+  |  \n");
+    printf("  |                                                                   |  \n");
+    printf("(o)  +-------------------------------------------------------------+  |  \n");
+    printf("PORTA|                   BANCADA DE PREPARO                        | (o)  \n");
+    printf("  |  |                                                             | PORTA \n");
+    printf("  |  +-------------------------------------------------------------+  |  \n");
+    printf("  |                                                                   |  \n");
+    printf("  +-------------------------------------------------------------------+  \n\n");
+
+    printf("Maria: Esta e a cozinha.\n");
+    printf("Maria: Aqui preparamos os salgados e guardamos os ingredientes.\n");
+
+    printf("  +-------------------------------------------------------------------+  \n");
+    printf("  |  [ARMARIO / GAVETAS]            [ESTANTE]             [PLANTA]    |  \n");
+    printf("  |  +------------------+        +--------------+           ||        |  \n");
+    printf("  |  | [===] [  |  ]    |        | [===]  [===] |          /  \\       |  \n");
+    printf("  |  | +--------------+ |        | [==========] |         (    )      |  \n");
+    printf("  |  | | [=]  GAVETA 1| |        | [===]  [===] |          \\  /       |  \n");
+    printf("  |  | +--------------+ |        | [==========] |           ||        |  \n");
+    printf("  |  | | [=]  GAVETA 2| |        +--------------+          |  |       |  \n");
+    printf("  |  | +--------------+ |                                  |__|       |  \n");
+    printf("  |  | | [=]  GAVETA 3| |                                             |  \n");
+    printf("  |  +------------------+                                             |  \n");
+    printf("  |                                                                   |  \n");
+    printf("  |                +---------------------------------+                |  \n");
+    printf("  |                |       ESCRIVANINHA DE TRABALHO  |                |  \n");
+    printf("  |                |  /--\\             .---.         |                |  \n");
+    printf("  |                |  |  | LUMINARIA  | MONITOR |    |                |  \n");
+    printf("  |                |  `--'            |_________|    |                |  \n");
+    printf("  |                |     \\               ||          |                |  \n");
+    printf("  |                |  ____\\____      [=========]     |                |  \n");
+    printf("  |                |                 [TECLADO  ]     |                |  \n");
+    printf("  |                +---------------------------------+                |  \n");
+    printf("  |                                 ( O )                             |  \n");
+    printf("  |                                /|---|\\  CADEIRA                   |  \n");
+    printf("  |                                 /   \\                             |  \n");
+    printf("  |                                                                   |  \n");
+    printf("  +----------------------------------------------------------(o)------+  \n");
+    printf("                                                             PORTA       \n\n");
+
+    printf("Maria: Esta e a sala de administracao.\n");
+    printf("Maria: E aqui que cuidamos das tarefas administrativas da loja.\n");
+
+    printf("  +---------------------------------------------------------+  \n");
+    printf("  |          +-----------+                                  |  \n");
+    printf("  |          |   (||)    |                                  |  \n");
+    printf("  |          |  |~~~~~|  |                      ________    |  \n");
+    printf("  |          |  |_____|  |                    //         \\||  \n");
+    printf("  |          +-----+-----+                   (   ( O )   )| |  \n");
+    printf("  |                                           \\________ //||  \n");
+    printf("  |                                                         |  \n");
+    printf("  |                                                         |  \n");
+    printf("  |                                                         |  \n");
+    printf("  |                                                         |  \n");
+    printf("  +------------(o)------------------------------------------+  \n");
+    printf("              PORTA                                         \n\n");
+
+    printf("Maria: E aqui fica o banheiro.\n");
+
 // Escolhas
     printf("\n====================================\n");
     printf("          UMA PORTA ESTRANHA\n");
