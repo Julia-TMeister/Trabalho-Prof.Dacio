@@ -1,1 +1,79 @@
+#include <stdio.h>
+#include <stdlib.h>
 
+void inicializarJogo(int *dia, int *pistas, int *escolha) {
+    *dia = 1;
+    *pistas = 0;
+    *escolha = 0;
+}
+
+void exibirIntroducao() {
+
+    printf("====================================\n");
+    printf("          O EXPEDIENTE\n");
+    printf("====================================\n");
+
+    printf("\nJuliano esta procurando emprego.\n");
+    printf("Depois de algum tempo, ele encontra uma\n");
+    printf("vaga em uma pequena loja de salgados chamada Sabor Coxinha.\n");
+
+    printf("\nEle decide aceitar o emprego.\n");
+}
+
+void diaUm(int *pistas, int *escolha) {
+
+    printf("\n====================================\n");
+    printf("              DIA 1\n");
+    printf("           O EMPREGO\n");
+    printf("====================================\n");
+
+    printf("\nJuliano chega a loja para seu primeiro dia.\n");
+    
+    //Apresentaão da maria
+
+    printf("                       _____                          \n");
+    printf("                      /_____\\                        \n");
+    printf("                     //     \\\\                        \n");
+    printf("                    |(  o.o  )|      \n");
+    printf("                    | \\ =  / |                      \n");
+    printf("                    \\ _`---'_ /                      \n");
+    printf("                        | |                          \n");
+    printf("                      .-' '-.                        \n");
+    printf("                     /   |   \\                       \n");
+    printf("                    / /| | |\\ \\     \n");
+    printf("                   ( ( | | | ) )                     \n");
+    printf("                    \\| | | |//                       \n");
+    printf("                     |   |   |                       \n");
+    printf("                     /   |   \\                       \n");
+    printf("                    /    |    \\      \n");
+    printf("                   /_____|_____\\                     \n");
+    printf("                        | |                          \n");
+    printf("                        | |                          \n");
+    printf("                        | |                          \n");
+    printf("                        | |                          \n");
+    printf("                       /_| \\_                        \n");
+    printf("             _________|_____|_________               \n\n");
+
+    printf("Maria: Ola! Voce deve ser o Juliano.\n");
+    printf("Maria: Meu nome e Maria e eu sou a dona da Sabor Coxinha.\n");
+    printf("Maria: Vou apresentar o lugar para voce e explicar\n");
+    printf("       como as coisas funcionam por aqui.\n");
+
+
+
+//fechamento 
+int main(int argc, char *argv[]) {
+
+    int dia;
+    int pistas;
+    int escolha;
+
+    inicializarJogo(&dia, &pistas, &escolha);
+
+    exibirIntroducao();
+
+    diaUm(&pistas, &escolha);
+
+    return 0;
+}
+    
