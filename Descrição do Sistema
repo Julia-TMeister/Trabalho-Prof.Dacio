@@ -1,5 +1,5 @@
 # HISTÓRIA DO JOGO — O EXPEDIENTE
-O projeto consiste no desenvolvimento de um jogo de aventura e investigação em linguagem C, chamado “O Expediente”. O sistema apresenta uma história interativa
+O projeto consiste no desenvolvimento de um jogo de investigação e terror psicológico em linguagem C, chamado “O Expediente”. O sistema apresenta uma história interativa
 na qual o jogador controla Juliano, um personagem que consegue um emprego em uma pequena loja de salgados chamada Sabor Coxinha, administrada por Maria e Oswaldo.
 O jogo será executado pelo terminal, utilizando textos, diálogos e escolhas para conduzir o jogador durante a história.
 As decisões tomadas pelo jogador influenciam o desenvolvimento da narrativa e podem levar a diferentes acontecimentos e finais.
