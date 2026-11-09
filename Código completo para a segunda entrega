@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-// ESTRUTURA PRINCIPAL DO JOGO
-// A estrutura armazena as informacoes da partida.
+// Estrutura principal do jogo
+// Armazenamento das informaões da partida
 struct Jogo {
     int dia;
     int pistas;
@@ -10,8 +10,7 @@ struct Jogo {
     int chaveIdentificada;
     int escolhas[10];
 };
-
-// Inicializa os valores do jogo.
+// Inicializa os valores do jogo
 void inicializarJogo(struct Jogo *jogo) {
 	int i;
     jogo->dia = 1;
@@ -19,54 +18,43 @@ void inicializarJogo(struct Jogo *jogo) {
     jogo->escolha = 0;
     jogo->chaveVista = 0;
     jogo->chaveIdentificada = 0;
-
-    // O vetor armazena as escolhas realizadas pelo jogador.
+    // O vetor armazena as escolhas realizadas pelo jogador
     for (i = 0; i < 10; i++) {
         jogo->escolhas[i] = 0;
     }
 }
-
-// Funcao para validar as opcoes dos menus.
+// Funcao para validar as opcoes dos menus
 int lerOpcao(int minimo, int maximo) {
-
     int opcao;
-
     do {
         printf("\nEscolha: ");
         scanf("%d", &opcao);
-
         if (opcao < minimo || opcao > maximo) {
             printf("Opcao invalida! Tente novamente.\n");
         }
-
     } while (opcao < minimo || opcao > maximo);
 
     return opcao;
 }
 
-// Apresentacao inicial da historia.
+// Apresentacao 
 void exibirIntroducao() {
-
     printf("\n");
     printf("========================================\n");
     printf("              O EXPEDIENTE\n");
     printf("========================================\n");
-
     printf("\nJuliano esta procurando emprego.\n");
     printf("Depois de algum tempo, ele encontra uma\n");
     printf("vaga em uma pequena loja de salgados\n");
     printf("chamada Sabor Coxinha.\n");
-
     printf("\nA loja e administrada por Maria e Oswaldo.\n");
     printf("Juliano decide aceitar o emprego.\n");
-
     printf("\nEle ainda nao imagina o que realmente\n");
     printf("acontece naquele estabelecimento...\n");
 }
 
-// CENARIOS E PERSONAGENS
-
-// Desenho da personagem Maria.
+// Cenarios e personagens - O cenario e os personagens foram feitos com a ajuda da ia 
+// Desenho da personagem Maria
 void exibirMaria() {
 
     printf("\n");
@@ -94,7 +82,7 @@ void exibirMaria() {
     printf("             _________|_____|_________                  \n\n");
 }
 
-// Desenho do personagem Oswaldo.
+// Desenho do personagem Oswaldo
 void exibirOswaldo() {
 
     printf("\n");
@@ -117,7 +105,7 @@ void exibirOswaldo() {
     printf("   (____|____)   \n\n");
 }
 
-// Cenario da entrada da lanchonete.
+// Cenario da entrada da lanchonete
 void exibirEntrada() {
 
     printf("\n========================================\n");
@@ -142,7 +130,7 @@ void exibirEntrada() {
     printf("                              ENTRADA                                   \n\n");
 }
 
-// Cenario da cozinha.
+// Cenario da cozinha
 void exibirCozinha() {
 
     printf("\n========================================\n");
@@ -167,7 +155,7 @@ void exibirCozinha() {
     printf("  +-------------------------------------------------------------------+  \n\n");
 }
 
-// Cenario da gerencia.
+// Cenario da gerencia
 void exibirGerencia() {
 
     printf("\n========================================\n");
@@ -202,7 +190,7 @@ void exibirGerencia() {
     printf("                                                             PORTA       \n\n");
 }
 
-// Cenario do banheiro.
+// Cenario do banheiro
 void exibirBanheiro() {
 
     printf("\n========================================\n");
@@ -224,16 +212,14 @@ void exibirBanheiro() {
 }
 
 // DIA 1 - O EMPREGO
-
 void diaUm(struct Jogo *jogo) {
-
     int atividade;
     int resposta;
     int pergunta;
     int continuar;
-
     jogo->dia = 1;
 
+// Os titulos de cada dia foram feitos com a ajuda da ia
     printf("\n========================================\n");
     printf("                 DIA 1\n");
     printf("                O EMPREGO\n");
@@ -241,157 +227,100 @@ void diaUm(struct Jogo *jogo) {
 
     printf("\n08:00 - Juliano chega a Sabor Coxinha.\n");
     printf("Maria aparece para recebe-lo.\n");
-
     exibirMaria();
-
     printf("Maria: Ola! Voce deve ser o Juliano.\n");
     printf("Maria: Meu nome e Maria, sou a dona da loja.\n");
     printf("Maria: Vou apresentar o lugar para voce.\n");
-
     printf("\nJuliano cumprimenta Maria.\n");
-
     exibirEntrada();
-
     printf("Maria: Esta e a entrada da lanchonete.\n");
     printf("Maria: Aqui fica o balcao de atendimento.\n");
-
     exibirCozinha();
-
     printf("Maria: Esta e a cozinha.\n");
     printf("Maria: Aqui preparamos os nossos salgados.\n");
-
     exibirGerencia();
-
     printf("Maria: Esta e a sala de administracao.\n");
     printf("Maria: Aqui cuidamos das tarefas da loja.\n");
-
     exibirBanheiro();
-
     printf("Maria: E aqui fica o banheiro.\n");
-
     printf("\nDurante a apresentacao, Juliano percebe uma porta\n");
     printf("diferente, localizada no corredor dos fundos.\n");
-
     printf("Maria: Aquela porta da acesso a uma area restrita.\n");
     printf("Maria: Nao existe motivo para voce entrar ali.\n");
-
-    // O jogador decide se pergunta sobre a porta.
     printf("\nO que Juliano deseja fazer?\n");
     printf("1 - Perguntar sobre a porta\n");
     printf("2 - Ficar quieto\n");
-
     resposta = lerOpcao(1, 2);
     jogo->escolhas[0] = resposta;
-
     if (resposta == 1) {
-
         printf("\nJuliano: O que tem atras daquela porta?\n");
         printf("Maria: Apenas algumas coisas da loja.\n");
         printf("Maria: Nao precisa se preocupar com isso.\n");
         printf("Juliano percebe que Maria muda de assunto rapidamente.\n");
-
         jogo->pistas++;
-
     } else {
-
         printf("\nJuliano decide nao perguntar nada.\n");
         printf("Ele continua prestando atencao na apresentacao.\n");
     }
 
-    // Inicio das atividades do expediente.
-    printf("\n========================================\n");
-    printf("             PRIMEIRAS TAREFAS\n");
-    printf("========================================\n");
-
+    // Atividades do expediente
     printf("\n10:00 - Maria explica as tarefas.\n");
-
     printf("\n1 - Ajudar no balcao de atendimento\n");
     printf("2 - Organizar as mesas\n");
     printf("3 - Ajudar Oswaldo na cozinha\n");
-
     atividade = lerOpcao(1, 3);
-
     if (atividade == 1) {
-
         printf("\nJuliano vai atender os clientes.\n");
         printf("Cliente: Bom dia! Quero duas coxinhas e um suco.\n");
         printf("Juliano: Bom dia! Ja vou preparar seu pedido.\n");
         printf("Maria: Primeiro anote o pedido e depois confira tudo.\n");
-
     } else if (atividade == 2) {
-
         printf("\nJuliano comeca a organizar as mesas.\n");
         printf("Enquanto trabalha, percebe que o corredor dos fundos\n");
         printf("fica proximo da porta que Maria proibiu de abrir.\n");
-
     } else {
-
         printf("\nJuliano vai ate a cozinha ajudar Oswaldo.\n");
-
         exibirOswaldo();
-
         printf("Oswaldo: Opa! Pode me ajudar com as bandejas?\n");
         printf("Juliano: Claro. Onde devo coloca-las?\n");
         printf("Oswaldo: Deixe aquelas na bancada.\n");
-
         printf("Oswaldo deixa uma colher cair e demora para perceber.\n");
         printf("Oswaldo: Ando meio distraido ultimamente.\n");
     }
-
     printf("\n12:00 - Juliano faz uma pausa para almocar.\n");
     printf("13:00 - Ele volta ao trabalho.\n");
     printf("A tarde passa com clientes entrando e saindo.\n");
-
-    // Conversa com Oswaldo.
     printf("\n15:00 - Oswaldo se aproxima.\n");
     printf("Oswaldo: E ai, como esta sendo seu primeiro dia?\n");
     printf("Juliano: Estou gostando. Ainda estou aprendendo.\n");
-
     printf("\nDeseja fazer perguntas a Oswaldo?\n");
     printf("1 - Sim\n");
     printf("2 - Nao\n");
-
     resposta = lerOpcao(1, 2);
-
     if (resposta == 1) {
-
         continuar = 1;
-
-        // O while permite fazer varias perguntas.
         while (continuar == 1) {
-
             printf("\nO que Juliano deseja perguntar?\n");
             printf("1 - Ha quanto tempo voce trabalha aqui?\n");
             printf("2 - A loja abre todos os dias?\n");
             printf("3 - Por que aquela porta fica fechada?\n");
             printf("4 - Encerrar conversa\n");
-
             pergunta = lerOpcao(1, 4);
-
             if (pergunta == 1) {
-
                 printf("\nJuliano: Ha quanto tempo voce trabalha aqui?\n");
                 printf("Oswaldo: Faz alguns anos.\n");
                 printf("Oswaldo: Ja me acostumei com a rotina.\n");
-
             } else if (pergunta == 2) {
-
                 printf("\nJuliano: A loja abre todos os dias?\n");
                 printf("Oswaldo: Quase todos. Precisamos manter o negocio.\n");
-
             } else if (pergunta == 3) {
-
                 printf("\nJuliano: Por que aquela porta fica fechada?\n");
                 printf("Oswaldo: Que porta? Ah... aquela dos fundos.\n");
                 printf("Oswaldo: E uma area que nao precisa usar.\n");
                 printf("Oswaldo: Melhor deixar fechada.\n");
-
                 printf("\nJuliano percebe que Oswaldo demora para responder.\n");
-
                 jogo->pistas++;
-
             } else {
-
                 continuar = 0;
                 printf("\nJuliano: Obrigado pela conversa.\n");
                 printf("Oswaldo: Imagina. Vamos terminar o trabalho.\n");
@@ -402,28 +331,22 @@ void diaUm(struct Jogo *jogo) {
     // Final do primeiro dia.
     printf("\n16:30 - A movimentacao da loja diminui.\n");
     printf("Juliano ajuda a guardar os materiais.\n");
-
     printf("\n17:30 - Maria confere a organizacao da loja.\n");
     printf("Maria: Obrigada pela ajuda de hoje, Juliano.\n");
     printf("Juliano: Por nada. Ate amanha.\n");
 
-  
+    printf("\n====================================\n");
     printf("          FIM DO PRIMEIRO DIA\n");
+    printf("====================================\n");
     
-
     printf("\n18:00 - O expediente termina.\n");
     printf("Juliano pega suas coisas e sai da loja.\n");
-
     if (jogo->pistas == 0) {
-
         printf("\nJuliano vai para casa sem desconfiar de nada.\n");
-
     } else {
-
         printf("\nNo caminho para casa, Juliano continua pensando\n");
         printf("nas respostas estranhas que recebeu.\n");
     }
-
     printf("\nAmanha sera um novo expediente...\n");
 }
 
@@ -431,22 +354,19 @@ void diaUm(struct Jogo *jogo) {
 
 //Programa principal
 int main(int argc, char *argv[]) {
-	// Criacao da variavel que armazena os dados da partida.
+	// Variavel que armazena os dados da partida
     struct Jogo jogo;
 
-    // Inicializacao das informacoes.
+    // Inicializacao das informacoes
     inicializarJogo(&jogo);
 
-    // Apresentacao inicial.
+    // Apresentacao inicial
     exibirIntroducao();
 
-    // Execucao dos quatro dias da historia.
+    // Execucao dos quatro dias da historia
     diaUm(&jogo);
-
     diaDois(&jogo);
-
     diaTres(&jogo);
-
     diaQuatro(&jogo);
 	return 0;
 }
