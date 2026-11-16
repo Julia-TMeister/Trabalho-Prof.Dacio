@@ -615,6 +615,266 @@ int main(int argc, char *argv[]) {
     diaDois();
 
     diaTres();
+void exibirFreezer() {
 
+    printf("\n========================================\n");
+    printf("          FRIGORIFICO ABANDONADO\n");
+    printf("========================================\n\n");
+
+    printf("  +-------------------------------------------------------------------+  \n");
+    printf("  |  ===============================================================  |  \n");
+    printf("  |      |             |             |             |             |    |  \n");
+    printf("  |     / \\          / \\          / \\          / \\          / \\  |  \n");
+    printf("  |    /   \\        /   \\        /   \\        /   \\        /   \\ |  \n");
+    printf("  |   (  ?  )       (  ?  )       (  ?  )       (  ?  )       (  ?  ) |  \n");
+    printf("  |    \\___/        \\___/        \\___/        \\___/        \\___/ |  \n");
+    printf("  |                                                                   |  \n");
+    printf("  |                                                                   |  \n");
+    printf("  |                                                                   |  \n");
+    printf("  |  +-----------------------+                                        |  \n");
+    printf("  |  |                       |                                        |  \n");
+    printf("  |  |   +-------+           |                                        |  \n");
+    printf("  |  |   | Papel |           |                                        |  \n");
+    printf("  |  |   | [===] |           |                                        |  \n");
+    printf("  |  |   +-------+           |                                        |  \n");
+    printf("  |  +-----------------------+                                       (o) \n");
+    printf("  |      ||             ||                                           PORTA  \n");
+    printf("  +-------------------------------------------------------------------+  \n\n");
+}
+
+void descoberta() { //juliano descobre o que tem atras da porta
+
+    printf("CLIC...\n\n");
+
+    printf("A porta finalmente se abre.\n");
+
+    printf("Juliano empurra lentamente a porta.\n");
+
+    printf("O ambiente esta muito frio.\n");
+
+    exibirFreezer();
+
+    printf("\nJuliano encontra um grande freezer.\n");
+
+    printf("Ao observar o interior, percebe algo terrivel.\n");
+
+    printf("Existem corpos armazenados no local.\n");
+
+    printf("Ao lado da entrada existem diversas fotografias.\n");
+
+    printf("Cada fotografia possui um nome.\n");
+
+    printf("Algumas estao riscadas com uma caneta vermelha.\n");
+
+    printf("\nJuliano observa as fotografias com atencao.\n");
+
+    printf("Ele reconhece algumas pessoas que ja passaram pela loja.\n");
+
+    printf("De repente, encontra uma fotografia familiar.\n");
+
+    printf("\nE a sua propria fotografia.\n");
+
+    printf("Mas ela ainda nao esta riscada.\n");
+
+    printf("\n========================================\n");
+    printf("             A VERDADE\n");
+    printf("========================================\n");
+
+    printf("\nJuliano entende o que esta acontecendo.\n");
+
+    printf("Os salgados vendidos na loja estavam relacionados\n");
+    printf("aos crimes cometidos por Maria e Oswaldo.\n");
+
+    printf("\nEle nao foi contratado apenas para trabalhar.\n");
+
+    printf("Ele tambem havia sido escolhido como uma futura vitima.\n");
+
+    printf("\nJuliano entra em panico e sai rapidamente do freezer.\n");
+
+    printf("Por estar assustado, deixa a porta aberta.\n");
+}
+
+// FINAIS DO JOGO
+
+// Final 1
+void finalUm() {
+
+    printf("\n");
+    printf("========================================\n");
+    printf("              FINAL 1 \n");
+    printf("========================================\n");
+
+    printf("\nMaria procura pela loja, mas nao encontra Juliano.\n");
+
+    printf("Ela olha novamente para a cozinha.\n");
+    printf("Depois de algum tempo, acredita que ele conseguiu fugir.\n");
+
+    printf("\nMaria sai do estabelecimento.\n");
+
+    printf("Juliano espera alguns minutos.\n");
+    printf("Quando percebe que Maria foi embora, sai do esconderijo.\n");
+
+    printf("\nEle corre para fora da Sabor Coxinha.\n");
+
+    printf("Juliano procura ajuda e chama a policia.\n");
+
+    printf("\nAs autoridades chegam ao estabelecimento.\n");
+
+    printf("Durante a investigacao, encontram as evidencias\n");
+    printf("dos crimes cometidos por Maria e Oswaldo.\n");
+
+    printf("\n========================================\n");
+    printf("         JULIANO CONSEGUIU ESCAPAR\n");
+    printf("========================================\n");
+
+    printf("\nFIM DE JOGO!\n");
+}
+
+// Final 2
+void finalDois() {
+
+    printf("\n");
+    printf("========================================\n");
+    printf("               FINAL 2 \n");
+    printf("========================================\n");
+
+    printf("Maria encontra Juliano.\n");
+
+    printf("\nMaria: Entao voce estava aqui...\n");
+
+    printf("Juliano tenta sair, mas nao consegue.\n");
+
+    printf("\nVoce nao conseguiu deixar o estabelecimento.\n");
+
+    printf("\n========================================\n");
+    printf("             ALGUNS DIAS DEPOIS\n");
+    printf("========================================\n");
+
+    printf("\nUm novo funcionario e contratado.\n");
+
+    printf("A Sabor Coxinha continua funcionando normalmente.\n");
+
+    printf("Os clientes continuam entrando e comprando salgados.\n");
+
+    printf("Maria e Oswaldo continuam administrando a loja.\n");
+
+    printf("\nUm novo funcionario ocupa o lugar de Juliano.\n");
+
+    printf("O ciclo continua...\n");
+
+    printf("\n========================================\n");
+    printf("                 FIM\n");
+    printf("========================================\n");
+}
+
+void diaQuatro() { // dia 4
+    int esconderijo;
+    jogo.dia = 4;
+
+    printf("\n========================================\n");
+    printf("                 DIA 4\n");
+    printf("             A DESCOBERTA\n");
+    printf("========================================\n");
+
+    printf("\n07:00 - Juliano chega mais cedo a loja.\n");
+
+    printf("Maria ainda nao chegou.\n");
+
+    printf("Juliano abre a porta e entra no estabelecimento.\n");
+
+    printf("\nEle se lembra da chave diferente que viu na gerencia.\n");
+
+    printf("Movido pela curiosidade, decide procurar a chave.\n");
+
+    exibirGerencia();
+
+    printf("Juliano abre a gaveta e encontra a chave grande.\n");
+
+    printf("Ele pega a chave e segue em direcao a porta proibida.\n");
+
+    printf("\n08:00 - Juliano utiliza a chave na fechadura.\n");
+
+    descoberta();
+
+    printf("\nPouco tempo depois, Juliano escuta a porta da loja.\n");
+
+    printf("Maria chegou mais cedo do que ele esperava.\n");
+
+    printf("Maria entra no estabelecimento.\n");
+
+    printf("Ela percebe que a porta do freezer esta aberta.\n");
+
+    printf("\nMaria: Meu Deus... ele descobriu.\n");
+
+    printf("Maria comeca a procurar Juliano pela loja.\n");
+
+    printf("\nJuliano precisa se esconder rapidamente!\n");
+
+    printf("\nOnde Juliano deseja se esconder?\n");
+
+    printf("1 - No armario embaixo da pia da cozinha\n");
+    printf("2 - Na sala de gerencia\n");
+
+    esconderijo = lerOpcao(1, 2);
+
+    jogo.escolha = esconderijo;
+    jogo.escolhas[3] = esconderijo;
+
+    if (esconderijo == 1) {
+        printf("\nJuliano corre para a cozinha.\n");
+
+        exibirCozinha();
+
+        printf("Ele abre o armario embaixo da pia e entra.\n");
+
+        printf("Maria passa pela cozinha.\n");
+
+        printf("Maria: Onde voce esta?\n");
+
+        printf("Ela procura por alguns minutos.\n");
+
+        if (jogo.pistas >= 3 && jogo.chaveIdentificada == 1) { // precisa ter encontrado 3 ou mais pistas e ter identificado a chave 
+            printf("\nJuliano permanece escondido.\n");
+
+            printf("Maria nao percebe sua presenca.\n");
+
+            printf("Depois de algum tempo, ela desiste de procurar.\n");
+
+            printf("\nAs informacoes que Juliano reuniu durante os dias\n");
+            printf("anteriores foram fundamentais para sua sobrevivencia.\n");
+
+            finalUm();
+            
+        } else {
+            printf("\nJuliano tenta permanecer em silencio.\n");
+
+            printf("Mas Maria percebe que a porta do armario esta entreaberta.\n");
+
+            printf("Maria se aproxima lentamente.\n");
+
+            printf("Maria: Encontrei voce.\n");
+
+            printf("\nJuliano nao consegue escapar.\n");
+
+            finalDois(); 
+        }
+    } else {
+        printf("\nJuliano corre para a sala de gerencia.\n");
+
+        exibirGerencia();
+
+        printf("Ele entra e tenta se esconder.\n");
+
+        printf("Maria continua procurando pela loja.\n");
+
+        printf("Depois de alguns minutos, ela entra na gerencia.\n");
+
+        printf("Maria percebe que Juliano esta escondido.\n");
+
+        printf("\nMaria: Entao voce estava aqui...\n");
+
+        finalDois(); // se esconder na gerencia gera o final 2
+    }
+}
 	return 0;
 }
