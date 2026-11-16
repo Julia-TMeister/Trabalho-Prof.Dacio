@@ -392,15 +392,6 @@ void diaUm() { // inicio do dia 1
     printf("\nAmanha sera um novo expediente...\n");
 }
 
-
-
-
-int main(int argc, char *argv[]) {
-	inicializarJogo();
-
-    exibirIntroducao();
-
-    diaUm();
 void diaDois() { // inicio dia 2
     int pergunta; //armazena escolhas 
 
@@ -613,5 +604,16 @@ void diaTres() { // inicio dia 3
 
     printf("Quantidade de pistas encontradas: %d\n", jogo.pistas); // pistas dia 3 
 }
+int main(int argc, char *argv[]) {
+	inicializarJogo();
+
+    exibirIntroducao();
+
+    diaUm();
+
+    diaDois();
+
+    diaTres();
+
 	return 0;
 }
