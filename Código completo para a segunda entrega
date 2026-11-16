@@ -603,6 +603,7 @@ void diaTres() { // inicio dia 3
     printf("\nAmanha Juliano precisara abrir a loja sozinho.\n");
 
     printf("Quantidade de pistas encontradas: %d\n", jogo.pistas); // pistas dia 3 
+
 }
 int main(int argc, char *argv[]) {
 	inicializarJogo();
