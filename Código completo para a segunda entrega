@@ -401,6 +401,217 @@ int main(int argc, char *argv[]) {
     exibirIntroducao();
 
     diaUm();
+void diaDois() { // inicio dia 2
+    int pergunta; //armazena escolhas 
 
+    jogo.dia = 2; 
+
+    printf("\n========================================\n");
+    printf("                 DIA 2\n");
+    printf("            COISAS ESTRANHAS\n");
+    printf("========================================\n");
+
+    printf("\n08:00 - Juliano chega novamente a loja.\n");
+    printf("Maria: Bom dia, Juliano! Pode comecar suas tarefas.\n");
+
+    printf("\nA loja parece estar funcionando normalmente.\n");
+    printf("Mas Juliano comeca a perceber algumas coisas.\n");
+
+    printf("\n10:30 - Enquanto trabalha, ele escuta um barulho.\n");
+    printf("TUM... TUM... TUM...\n");
+
+    printf("O som parece vir da porta dos fundos.\n");
+
+    printf("\nJuliano olha para o corredor.\n");
+    printf("Nao ha ninguem por perto.\n");
+
+    printf("\nPouco depois, ele percebe um cheiro estranho\n");
+    printf("vindo da direcao da area restrita.\n");
+
+    printf("\nJuliano decide investigar discretamente.\n");
+
+    printf("\nO que Juliano deseja perguntar a Maria?\n");
+    printf("1 - Perguntar sobre o barulho\n");
+    printf("2 - Perguntar sobre o cheiro estranho\n");
+    printf("3 - Perguntar por que Maria parece nervosa\n");
+    printf("4 - Nao fazer mais perguntas\n");
+
+    pergunta = lerOpcao(1, 4);
+    jogo.escolhas[1] = pergunta; // posição 1 das escolhas no vetor
+
+    if (pergunta == 1) {
+        printf("\nJuliano: Maria, voce ouviu algum barulho?\n");
+        printf("Maria: Barulho? Deve ser algum equipamento.\n");
+        printf("Maria: Nao precisa se preocupar.\n");
+
+        printf("Juliano percebe que ela responde rapidamente.\n");
+
+        jogo.pistas++; // aumenta pistas 
+    } else if (pergunta == 2) {
+        printf("\nJuliano: Estou sentindo um cheiro estranho.\n");
+        printf("Maria: Deve ser algum produto de limpeza.\n");
+        printf("Maria: Vou verificar depois.\n");
+
+        printf("Juliano percebe que Maria evita olhar para ele.\n");
+
+        jogo.pistas++;
+    } else if (pergunta == 3) {
+        printf("\nJuliano: Esta tudo bem com voce, Maria?\n");
+        printf("Maria: Claro! Por que nao estaria?\n");
+        printf("Maria: Volte ao trabalho, por favor.\n");
+    } else {
+        printf("\nJuliano decide guardar suas suspeitas.\n");
+    }
+
+    printf("\n14:00 - Juliano encontra Oswaldo na cozinha.\n");
+
+    exibirOswaldo();
+
+    printf("Oswaldo: Precisa de alguma coisa?\n");
+
+    printf("\n1 - Perguntar sobre os barulhos\n");
+    printf("2 - Perguntar sobre a porta dos fundos\n");
+    printf("3 - Perguntar sobre os ingredientes\n");
+    printf("4 - Encerrar a conversa\n");
+    
+//perguntas Oswaldo
+    pergunta = lerOpcao(1, 4);
+
+    if (pergunta == 1) {
+        printf("\nJuliano: Voce tambem ouviu alguns barulhos?\n");
+        printf("Oswaldo: Ah... deve ser alguma coisa caindo.\n");
+        printf("Oswaldo: Acontece de vez em quando.\n");
+
+        printf("Oswaldo parece ficar desconfortavel.\n");
+
+        jogo.pistas++;
+    } else if (pergunta == 2) {
+        printf("\nJuliano: Aquela porta continua fechada.\n");
+        printf("Oswaldo: Ja falei que nao tem nada de interessante ali.\n");
+        printf("Oswaldo: Nao mexa naquela porta, esta bem?\n");
+
+        jogo.pistas++;
+    } else if (pergunta == 3) {
+        printf("\nJuliano: Onde voces guardam os ingredientes?\n");
+        printf("Oswaldo: Na despensa e nos refrigeradores.\n");
+        printf("Oswaldo: Maria cuida da maior parte das compras.\n");
+    } else {
+        printf("\nJuliano decide encerrar a conversa.\n");
+    }
+
+    printf("\n16:30 - Juliano termina suas tarefas.\n");
+
+    printf("Antes de ir embora, ele olha novamente para o corredor.\n");
+    printf("A porta continua fechada.\n");
+
+    printf("\n========================================\n");
+    printf("          FIM DO SEGUNDO DIA\n");
+    printf("========================================\n");
+
+    printf("\nJuliano vai para casa pensando nos acontecimentos.\n");
+
+    printf("Quantidade de pistas encontradas: %d\n", jogo.pistas); //Quantidade total de pistas
+}
+
+void diaTres() { // inicio dia 3
+    int pergunta; // tmb armazena escolhas 
+
+    jogo.dia = 3;
+
+    printf("\n========================================\n");
+    printf("                 DIA 3\n");
+    printf("                A CHAVE\n");
+    printf("========================================\n");
+
+    printf("\n08:00 - Juliano chega a Sabor Coxinha.\n");
+
+    printf("Maria: Bom dia! Hoje temos bastante trabalho.\n");
+
+    printf("Juliano passa a manha ajudando na loja.\n");
+
+    printf("\n15:30 - Maria chama Juliano para conversar.\n");
+
+    printf("Maria: Amanha vou chegar um pouco mais tarde.\n");
+    printf("Maria: Voce precisara abrir a loja sozinho.\n");
+
+    printf("Juliano: Tudo bem. Como faco para abrir?\n");
+
+    printf("Maria: Oswaldo vai mostrar onde fica a chave.\n");
+
+    printf("\n========================================\n");
+    printf("            A SALA DE GERENCIA\n");
+    printf("========================================\n");
+
+    exibirGerencia(); //retorna a imagem 
+
+    printf("Oswaldo: Venha comigo. Vou mostrar onde guardamos.\n");
+
+    printf("Oswaldo abre a primeira gaveta da escrivaninha.\n");
+
+    printf("\nDentro dela existem varias chaves.\n");
+
+    printf("Oswaldo procura a chave da entrada.\n");
+
+    printf("\nJuliano observa uma chave grande e diferente.\n");
+    printf("Ela parece mais antiga e pesada que as outras.\n");
+
+    jogo.chaveVista = 1; // juliano viu a chave 
+
+    printf("\nJuliano: Para que serve aquela chave maior?\n");
+
+    printf("Oswaldo: Aquela? Ah... deve ser de algum deposito antigo.\n");
+    printf("Oswaldo: Nem lembro direito.\n");
+
+    printf("Oswaldo pega outra chave e fecha a gaveta.\n");
+
+    printf("\nOswaldo: Esta e a chave que voce vai utilizar.\n");
+
+    printf("Juliano: Certo. Obrigado.\n");
+
+    printf("\nAntes de sair, Juliano pode fazer mais perguntas.\n");
+
+    printf("\n1 - Perguntar se a chave grande abre a porta dos fundos\n");
+    printf("2 - Perguntar por que existem tantas chaves\n");
+    printf("3 - Nao perguntar nada\n");
+
+//perguntas 
+    pergunta = lerOpcao(1, 3);
+    jogo.escolhas[2] = pergunta; //registro de opções dia 3
+
+    if (pergunta == 1) {
+        printf("\nJuliano: Aquela chave pode abrir a porta dos fundos?\n");
+
+        printf("Oswaldo: Nao! Quer dizer... nao sei.\n");
+        printf("Oswaldo: Melhor nao mexer nela.\n");
+
+        printf("\nJuliano percebe que Oswaldo ficou nervoso.\n");
+
+        jogo.pistas++;
+        jogo.chaveIdentificada = 1; //descobriu a função da chave 
+    } else if (pergunta == 2) {
+        printf("\nJuliano: Por que voces guardam tantas chaves?\n");
+        printf("Oswaldo: Algumas sao antigas, outras sao de deposito.\n");
+        printf("Oswaldo: Nem todas ainda sao utilizadas.\n");
+
+        jogo.pistas++;
+    } else {
+        printf("\nJuliano decide nao fazer mais perguntas.\n");
+        printf("Ele guarda a informacao sobre a chave na memoria.\n");
+    }
+
+    printf("\n18:00 - O expediente termina.\n");
+
+    printf("Juliano vai para casa levando consigo a chave da entrada.\n");
+
+    printf("Mas nao consegue esquecer aquela chave diferente.\n");
+
+    printf("\n========================================\n");
+    printf("          FIM DO TERCEIRO DIA\n");
+    printf("========================================\n");
+
+    printf("\nAmanha Juliano precisara abrir a loja sozinho.\n");
+
+    printf("Quantidade de pistas encontradas: %d\n", jogo.pistas); // pistas dia 3 
+}
 	return 0;
 }
