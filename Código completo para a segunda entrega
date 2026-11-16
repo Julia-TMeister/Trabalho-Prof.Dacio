@@ -605,16 +605,6 @@ void diaTres() { // inicio dia 3
     printf("Quantidade de pistas encontradas: %d\n", jogo.pistas); // pistas dia 3 
 
 }
-int main(int argc, char *argv[]) {
-	inicializarJogo();
-
-    exibirIntroducao();
-
-    diaUm();
-
-    diaDois();
-
-    diaTres();
 void exibirFreezer() {
 
     printf("\n========================================\n");
@@ -876,5 +866,16 @@ void diaQuatro() { // dia 4
         finalDois(); // se esconder na gerencia gera o final 2
     }
 }
+int main(int argc, char *argv[]) {
+	inicializarJogo();
+
+    exibirIntroducao();
+
+    diaUm();
+
+    diaDois();
+
+    diaTres();
+
 	return 0;
 }
