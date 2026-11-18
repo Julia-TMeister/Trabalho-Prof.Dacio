@@ -16,8 +16,8 @@ struct Jogo jogo;
 
 void inicializarJogo() { // evita que o jogo comece com informações incorretas ou valores que não foram definidos
 	int i;
-    jogo.dia = 1; 
-    jogo.pistas = 0; 
+    jogo.dia = 1;      //O ponto serve para acessar uma variável específica que está dentro da struct
+    jogo.pistas = 0;    
     jogo.escolha = 0;
     jogo.chaveVista = 0;
     jogo.chaveIdentificada = 0;
