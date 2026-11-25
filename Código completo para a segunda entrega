@@ -1,29 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-// Essa estrutura funciona como um armazenamento das informações da partida
-struct Jogo {
-    int dia; //Guarda em qual dia da história o jogador está
-    int pistas; //Conta quantas pistas foram encontradas
-    int escolha; //Armazena uma escolha específica do jogador
-    int chaveVista; //Registra se Juliano já viu a chave diferente
-    int chaveIdentificada; //Registra se o jogador identificou a possível função da chave
-    int escolhas[10]; //Armazena algumas decisões realizadas durante a partida
-};
-
-//Variavel Global - permite que diferentes funções acessem e atualizem as informações da mesma partida
-struct Jogo jogo;
-
+//variavel global
+int dia; //Guarda em qual dia da história o jogador está
+int pistas; //Conta quantas pistas foram encontradas
+int escolha; //Armazena uma escolha específica do jogador
+int chaveVista; //Registra se Juliano já viu a chave diferente
+int chaveIdentificada; //Registra se o jogador identificou a possível função da chave
+int escolhas[10]; //Armazena algumas decisões realizadas durante a partida
 
 void inicializarJogo() { // evita que o jogo comece com informações incorretas ou valores que não foram definidos
 	int i;
-    jogo.dia = 1;      //O ponto serve para acessar uma variável específica que está dentro da struct
-    jogo.pistas = 0;    
-    jogo.escolha = 0;
-    jogo.chaveVista = 0;
-    jogo.chaveIdentificada = 0;
+    dia = 1;      //O ponto serve para acessar uma variável específica que está dentro da struct
+    pistas = 0;    
+    escolha = 0;
+    chaveVista = 0;
+    chaveIdentificada = 0;
 
     for (i = 0; i < 10; i++) { //Evita que o vetor comece com valores aleatórios na memória
-        jogo.escolhas[i] = 0;
+        escolhas[i] = 0;
     }
 }
 
@@ -221,7 +215,7 @@ void diaUm() { // inicio do dia 1
     int pergunta;
     int continuar;
 
-    jogo.dia = 1;
+    dia = 1;
 
     printf("\n========================================\n");
     printf("                 DIA 1\n");
@@ -271,14 +265,14 @@ void diaUm() { // inicio do dia 1
 //perguntas 
 
     resposta = lerOpcao(1, 2);
-    jogo.escolhas[0] = resposta; //armazenar as escolhas feitas em escolhas 
+    escolhas[0] = resposta; //armazenar as escolhas feitas em escolhas 
 
     if (resposta == 1) {
         printf("\nJuliano: O que tem atras daquela porta?\n");
         printf("Maria: Apenas algumas coisas da loja.\n");
         printf("Maria: Nao precisa se preocupar com isso.\n");
         printf("Juliano percebe que Maria muda de assunto rapidamente.\n");
-        jogo.pistas++; // se fizer alguma dessas escolhas as pistas aumentam
+        pistas++; // se fizer alguma dessas escolhas as pistas aumentam
     } else {
         printf("\nJuliano decide nao perguntar nada.\n");
         printf("Ele continua prestando atencao na apresentacao.\n");
@@ -360,7 +354,7 @@ void diaUm() { // inicio do dia 1
                 printf("Oswaldo: Melhor deixar fechada.\n");
                 printf("\nJuliano percebe que Oswaldo demora para responder.\n");
 
-                jogo.pistas++; // aumenta pistas 
+                pistas++; // aumenta pistas 
             } else {
                 continuar = 0;
                 printf("\nJuliano: Obrigado pela conversa.\n");
@@ -383,7 +377,7 @@ void diaUm() { // inicio do dia 1
     printf("\n18:00 - O expediente termina.\n");
     printf("Juliano pega suas coisas e sai da loja.\n");
 
-    if (jogo.pistas == 0) { //Quanto de pistas armazenadas 
+    if (pistas == 0) { //Quanto de pistas armazenadas 
         printf("\nJuliano vai para casa sem desconfiar de nada.\n");
     } else {
         printf("\nNo caminho para casa, Juliano continua pensando\n");
@@ -395,7 +389,7 @@ void diaUm() { // inicio do dia 1
 void diaDois() { // inicio dia 2
     int pergunta; //armazena escolhas 
 
-    jogo.dia = 2; 
+    dia = 2; 
 
     printf("\n========================================\n");
     printf("                 DIA 2\n");
@@ -428,7 +422,7 @@ void diaDois() { // inicio dia 2
     printf("4 - Nao fazer mais perguntas\n");
 
     pergunta = lerOpcao(1, 4);
-    jogo.escolhas[1] = pergunta; // posição 1 das escolhas no vetor
+    escolhas[1] = pergunta; // posição 1 das escolhas no vetor
 
     if (pergunta == 1) {
         printf("\nJuliano: Maria, voce ouviu algum barulho?\n");
@@ -437,7 +431,7 @@ void diaDois() { // inicio dia 2
 
         printf("Juliano percebe que ela responde rapidamente.\n");
 
-        jogo.pistas++; // aumenta pistas 
+        pistas++; // aumenta pistas 
     } else if (pergunta == 2) {
         printf("\nJuliano: Estou sentindo um cheiro estranho.\n");
         printf("Maria: Deve ser algum produto de limpeza.\n");
@@ -445,7 +439,7 @@ void diaDois() { // inicio dia 2
 
         printf("Juliano percebe que Maria evita olhar para ele.\n");
 
-        jogo.pistas++;
+        pistas++;
     } else if (pergunta == 3) {
         printf("\nJuliano: Esta tudo bem com voce, Maria?\n");
         printf("Maria: Claro! Por que nao estaria?\n");
@@ -475,13 +469,13 @@ void diaDois() { // inicio dia 2
 
         printf("Oswaldo parece ficar desconfortavel.\n");
 
-        jogo.pistas++;
+        pistas++;
     } else if (pergunta == 2) {
         printf("\nJuliano: Aquela porta continua fechada.\n");
         printf("Oswaldo: Ja falei que nao tem nada de interessante ali.\n");
         printf("Oswaldo: Nao mexa naquela porta, esta bem?\n");
 
-        jogo.pistas++;
+        pistas++;
     } else if (pergunta == 3) {
         printf("\nJuliano: Onde voces guardam os ingredientes?\n");
         printf("Oswaldo: Na despensa e nos refrigeradores.\n");
@@ -501,13 +495,13 @@ void diaDois() { // inicio dia 2
 
     printf("\nJuliano vai para casa pensando nos acontecimentos.\n");
 
-    printf("Quantidade de pistas encontradas: %d\n", jogo.pistas); //Quantidade total de pistas
+    printf("Quantidade de pistas encontradas: %d\n", pistas); //Quantidade total de pistas
 }
 
 void diaTres() { // inicio dia 3
     int pergunta; // tmb armazena escolhas 
 
-    jogo.dia = 3;
+    dia = 3;
 
     printf("\n========================================\n");
     printf("                 DIA 3\n");
@@ -546,7 +540,7 @@ void diaTres() { // inicio dia 3
     printf("\nJuliano observa uma chave grande e diferente.\n");
     printf("Ela parece mais antiga e pesada que as outras.\n");
 
-    jogo.chaveVista = 1; // juliano viu a chave 
+    chaveVista = 1; // juliano viu a chave 
 
     printf("\nJuliano: Para que serve aquela chave maior?\n");
 
@@ -567,7 +561,7 @@ void diaTres() { // inicio dia 3
 
 //perguntas 
     pergunta = lerOpcao(1, 3);
-    jogo.escolhas[2] = pergunta; //registro de opções dia 3
+    escolhas[2] = pergunta; //registro de opções dia 3
 
     if (pergunta == 1) {
         printf("\nJuliano: Aquela chave pode abrir a porta dos fundos?\n");
@@ -577,14 +571,14 @@ void diaTres() { // inicio dia 3
 
         printf("\nJuliano percebe que Oswaldo ficou nervoso.\n");
 
-        jogo.pistas++;
-        jogo.chaveIdentificada = 1; //descobriu a função da chave 
+        pistas++;
+        chaveIdentificada = 1; //descobriu a função da chave 
     } else if (pergunta == 2) {
         printf("\nJuliano: Por que voces guardam tantas chaves?\n");
         printf("Oswaldo: Algumas sao antigas, outras sao de deposito.\n");
         printf("Oswaldo: Nem todas ainda sao utilizadas.\n");
 
-        jogo.pistas++;
+        pistas++;
     } else {
         printf("\nJuliano decide nao fazer mais perguntas.\n");
         printf("Ele guarda a informacao sobre a chave na memoria.\n");
@@ -602,7 +596,7 @@ void diaTres() { // inicio dia 3
 
     printf("\nAmanha Juliano precisara abrir a loja sozinho.\n");
 
-    printf("Quantidade de pistas encontradas: %d\n", jogo.pistas); // pistas dia 3 
+    printf("Quantidade de pistas encontradas: %d\n", pistas); // pistas dia 3 
 
 }
 
@@ -760,7 +754,7 @@ void finalDois() {
 
 void diaQuatro() { // dia 4
     int esconderijo;
-    jogo.dia = 4;
+    dia = 4;
 
     printf("\n========================================\n");
     printf("                 DIA 4\n");
@@ -808,8 +802,8 @@ void diaQuatro() { // dia 4
 
     esconderijo = lerOpcao(1, 2);
 
-    jogo.escolha = esconderijo;
-    jogo.escolhas[3] = esconderijo;
+    escolha = esconderijo;
+    escolhas[3] = esconderijo;
 
     if (esconderijo == 1) {
         printf("\nJuliano corre para a cozinha.\n");
@@ -824,7 +818,7 @@ void diaQuatro() { // dia 4
 
         printf("Ela procura por alguns minutos.\n");
 
-        if (jogo.pistas >= 3 && jogo.chaveIdentificada == 1) { // precisa ter encontrado 3 ou mais pistas e ter identificado a chave 
+        if (pistas >= 3 && chaveIdentificada == 1) { // precisa ter encontrado 3 ou mais pistas e ter identificado a chave 
             printf("\nJuliano permanece escondido.\n");
 
             printf("Maria nao percebe sua presenca.\n");
