@@ -10,7 +10,7 @@ int escolhas[10]; //Armazena algumas decisões realizadas durante a partida
 
 void inicializarJogo() { // evita que o jogo comece com informações incorretas ou valores que não foram definidos
 	int i;
-    dia = 1;      //O ponto serve para acessar uma variável específica que está dentro da struct
+    dia = 1;      
     pistas = 0;    
     escolha = 0;
     chaveVista = 0;
